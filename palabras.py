@@ -4,8 +4,9 @@ que algunas palabras se separa por un punto, y una
 coma, tambien hay que tener en cuenta, que las palabras
 escritas EN MAYUSCULAS mayusculas y minusculas cuenta como una este. Texto """
 #caracteres que no son palabras
-eliminar = ",;:.\n!\"'"
+eliminar = ";:.\n,!\"'"
 for caracter in eliminar:
+    #remplazar bacio 
     parrafo = parrafo.replace(caracter,
                           "")
 parrafo = parrafo.lower()
