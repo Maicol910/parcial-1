@@ -1,15 +1,16 @@
-parrafo = """este es un texto el cual deben contar el numero
+parrafo = """MAICOL este es un texto el cual deben contar el numero
 de palabras que tiene, deben tener en cuenta,
-que algunas palabras se separa por un punto, y una
+que algunas palabras se separa maicol por un punto, y una
 coma, tambien hay que tener en cuenta, que las palabras
-escritas EN MAYUSCULAS mayusculas y minusculas cuenta como una este. Texto """
+escritas EN MAYUSCULAS mayusculas y minusculas cuenta como una este. Texto MAICOL"""
 #caracteres que no son palabras
-eliminar = ";:.\n,!\"'"
+eliminar = ";:.\n,!\"'˙＃＄％?¡＠～•…¿“‘·′”’‗‚‛„"
 for caracter in eliminar:
     #remplazar bacio 
     parrafo = parrafo.replace(caracter,
                           "")
-parrafo = parrafo.lower()
+#colocar en mayuscular
+parrafo = parrafo.upper()
 palabras = parrafo.split(" ")
 conteo = {}
 for palabra in palabras:
