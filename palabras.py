@@ -1,27 +1,21 @@
-texto = """Hola, mundo. Esto es una cadena, se supone que debe tener varias palabras pues 
-vamos a realizar un conteo de frecuencia de las mismas usando el lenguaje de programación Python. 
-Ya no sé qué escribir pero sigo escribiendo para que poco a poco la cadena sea más larga y maicol el 
-ejercicio de programación sea demostrable. Creo que con todo esto que he escrito es suficiente MAICOL """
-
-# Los caracteres que no contamos como palabras
-quitar = ",;:.\n!\"'"
-for caracter in quitar:
-    texto = texto.replace(caracter,
-                          "")  # Remplazarlo por "nada"; es decir, removerlo
-# Lo convertimos a minúsculas pues una palabra mayúscula y minúscula cuenta como una sola
-texto = texto.lower()
-# Las palabras están separadas por un espacio así que convertimos la cadena a arreglo
-palabras = texto.split(" ")
-# Ahora vamos a contar las palabras creando un diccionario. En este caso la clave del diccionario
-# será la palabra, y el valor será el conteo
-diccionario_frecuencias = {}
+parrafo = """este es un texto el cual deben contar el numero
+de palabras que tiene, deben tener en cuenta,
+que algunas palabras se separa por un punto, y una
+coma, tambien hay que tener en cuenta, que las palabras
+escritas EN MAYUSCULAS mayusculas y minusculas cuenta como una este. Texto """
+#caracteres que no son palabras
+eliminar = ",;:.\n!\"'"
+for caracter in eliminar:
+    parrafo = parrafo.replace(caracter,
+                          "")
+parrafo = parrafo.lower()
+palabras = parrafo.split(" ")
+conteo = {}
 for palabra in palabras:
-    if palabra in diccionario_frecuencias:
-        diccionario_frecuencias[palabra] += 1
+    if palabra in conteo:
+        conteo[palabra] += 1
     else:
-        diccionario_frecuencias[palabra] = 1
-
-for palabra in diccionario_frecuencias:
-    frecuencia = diccionario_frecuencias[palabra]
-    print(f"palabra -->({palabra}) ---> {frecuencia}")
-
+        conteo[palabra] = 1
+for palabra in conteo:
+    repeticion = conteo[palabra]
+    print(f"palabra --> (( {palabra} )) se repite ---> {repeticion}")
